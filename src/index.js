@@ -1,13 +1,4 @@
 import './style.css';
-import Icon from './images/krustykrab.png';
+import page_load from './home.js';
 
-function component() {
-   const element = document.createElement('div');
-
-   element.textContent = ("Testing");
-   element.classList.add('hello');
-
-   return element;
-}
-
-document.body.appendChild(component());
+document.body.appendChild(page_load());
