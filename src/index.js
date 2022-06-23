@@ -1,4 +1,4 @@
 import './style.css';
-import page_load from './home.js';
+import home from './home.js';
 
-document.body.appendChild(page_load());
+document.body.appendChild(home());
