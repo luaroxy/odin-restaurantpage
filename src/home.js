@@ -1,20 +1,52 @@
 function page_load(){
     const container = document.createElement('div');
+    container.classList.add('container');
 
     function header() {
-        const header = document.createElement('div');
-        header.classList.add('header');
-     
+      const header = document.createElement('div');
+      header.classList.add('header');
+
+      const titletop = document.createElement('div');
+      titletop.textContent = ("Krusty Krab");
+
+      const optionstop = document.createElement('div');
+      optionstop.classList.add('optionstop');
+      const hometop = document.createElement('div');
+      hometop.textContent = ("Home");
+      optionstop.appendChild(hometop);
+      const menutop = document.createElement('div');
+      menutop.textContent = ("Menu");
+      optionstop.appendChild(menutop);
+      const contacttop = document.createElement('div');
+      contacttop.textContent = ("Contact");
+      optionstop.appendChild(contacttop);
+
+      header.appendChild(titletop);
+      header.appendChild(optionstop);
+
+      return header;
+    }
+
+    function intro() {
+        const intro = document.createElement('div');
+        intro.classList.add('intro');
+
+        const intro_background = document.createElement('div');
+        intro_background.classList.add('intro_background');
+
+        const intro_content = document.createElement('div');
+        intro_content.classList.add('intro_content');
         const title = document.createElement('div');
         title.textContent = ("Krusty Krab");
-     
         const subtitle = document.createElement('div');
         subtitle.textContent = ("Home of the Krabby Patty");
+        intro_content.appendChild(title);
+        intro_content.appendChild(subtitle);
+
+        intro.appendChild(intro_background);
+        intro.appendChild(intro_content);
      
-        header.appendChild(title);
-        header.appendChild(subtitle);
-     
-        return header;
+        return intro;
      }
      
      function about() {
@@ -79,6 +111,7 @@ function page_load(){
      }
 
      container.appendChild(header());
+     container.appendChild(intro());
      container.appendChild(about());
      container.appendChild(contact());
      container.appendChild(footer());

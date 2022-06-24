@@ -1,4 +1,5 @@
 import './style.css';
 import home from './home.js';
 
-document.body.appendChild(home());
+const content = document.getElementById("content");
+content.appendChild(home());
