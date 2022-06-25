@@ -56,7 +56,7 @@ function page_load(){
         const title = document.createElement('div');
         title.textContent = ("Krusty Krab");
      
-        const subtitle = document.createElement('div');
+        const subtitle = document.createElement('button');
         subtitle.textContent = ("Menu");
      
         about.appendChild(title);

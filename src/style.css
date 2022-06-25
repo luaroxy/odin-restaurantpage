@@ -45,6 +45,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
 }
 
 .intro_content{
@@ -74,7 +79,7 @@ body {
 
 .intro_content div:nth-child(2){
   color:rgba(0, 0, 0, 0.932);
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.25vw, 2rem);
   font-weight: 600;
   text-shadow: 2px 2px 2px white;
 }
@@ -109,6 +114,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8vh;
+}
+
+.about div{
+  font-size: clamp(1rem, 1.75vw, 2rem);
+  letter-spacing: 0.5vw;
+  font-weight: 550;
+}
+
+.about button {
+	background: none;
+	color: inherit;
+	border: 2px solid rgb(22, 97, 236);
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  padding: 1.5vh 2vw;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  letter-spacing: 0.25vw;
+}
+
+.about button:hover{
+  border: 2px solid white;
+  background-color: rgba(22, 97, 236, 0.788);
+  color: white;
 }
 
 .contact{
@@ -135,4 +165,30 @@ body {
   justify-content: center;
   gap: 1rem;
   font-size: clamp(1rem, 1.25vw, 2rem);
+}
+
+/*Fade in effect*/
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.75; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.75; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.75; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.75; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
