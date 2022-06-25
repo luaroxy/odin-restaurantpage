@@ -68,7 +68,7 @@ body {
   font-family: 'Spongeboy';
   font-size: clamp(2rem, 4vw, 5rem);
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  color:rgba(0, 0, 0, 0.932)
+  color:rgba(0, 0, 0, 0.932);
 }
 
 .intro_content div:first-child:hover{
@@ -147,7 +147,32 @@ body {
   color: rgb(22, 97, 236);
   display: flex;
   justify-content: space-around;
+  padding: 30vh 0;
+  font-size: clamp(1rem, 1.4vw, 2rem);
+}
+
+.contact img{
+  height: 7.5vh;
+  width: 7.5vw;
+  opacity: 0.795;
+}
+
+
+.address, .hours, .contact2{
+  display:flex;
+  flex-direction: column;
   align-items: center;
+  gap: 4vh;
+}
+
+.address p, .hours p, .contact2 p{
+  white-space: pre-line;
+  color: rgba(0, 0, 0, 0.795);
+  font-size: clamp(1rem, 1.25vw, 2rem);
+}
+
+.address p{
+  text-align: center;
 }
 
 .footer{

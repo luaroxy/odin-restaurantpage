@@ -1,3 +1,7 @@
+import locationIcon from './images/location.svg';
+import clockIcon from './images/clock.svg';
+import phoneIcon from './images/phone.svg';
+
 function page_load(){
     const container = document.createElement('div');
     container.classList.add('container');
@@ -70,13 +74,41 @@ function page_load(){
         contact.classList.add('contact');
      
         const address = document.createElement('div');
-        address.textContent = ("address");
+        address.classList.add('address');
+        const addressimg = document.createElement('img');
+        addressimg.src = locationIcon;
+        address.appendChild(addressimg);
+        const addresstitle = document.createElement('div');
+        addresstitle.textContent = ("Address");
+        address.appendChild(addresstitle);
+        const addresscontent = document.createElement('p');
+        addresscontent.textContent = (`831 Bottom Feeder Lane \r\n Bikini Bottom \r\n Pacific Ocean`);
+        address.appendChild(addresscontent);
      
         const hours = document.createElement('div');
-        hours.textContent = ("hours");
+        hours.classList.add('hours');
+        const hoursimg = document.createElement('img');
+        hoursimg.src = clockIcon;
+        hours.appendChild(hoursimg);
+        const hourstitle = document.createElement('div');
+        hourstitle.textContent = ("Hours");
+        hours.appendChild(hourstitle);
+        const hourscontent = document.createElement('p');
+        hourscontent.textContent = (`Monday-Thursday \r\n 11:00 am - 09:00 pm \r\n \r\n Friday-Sunday \r\n 10:00 am - 11:00 pm`);
+        hours.appendChild(hourscontent);
 
         const contact2 = document.createElement('div');
-        contact2.textContent = ("contact");
+        contact2.classList.add('contact2');
+        const contact2img = document.createElement('img');
+        contact2img.src = phoneIcon;
+        contact2.appendChild(contact2img);
+        const contact2title = document.createElement('div');
+        contact2title.textContent = ("Contact");
+        contact2.appendChild(contact2title);
+        const contact2content = document.createElement('p');
+        contact2content.textContent = (`Phone: 555-555-5555 \r\n Email: krustykrab@bb.com`);
+        contact2.appendChild(contact2content);
+
      
         contact.appendChild(address);
         contact.appendChild(hours);
