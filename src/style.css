@@ -217,3 +217,16 @@ body {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+/* ****** M E N U ********** */
+.menuContent{
+  display: grid;
+  grid-template-rows: 4fr repeat(14, 1fr);
+  grid-template-columns: 4fr 1fr 4fr 1fr;
+  padding: 30vh 25vw;
+  white-space: pre;
+}
+
+.menuTitle{
+  grid-column: 1 / 5;
+}
