@@ -225,8 +225,13 @@ body {
   grid-template-columns: 4fr 1fr 4fr 1fr;
   padding: 30vh 25vw;
   white-space: pre;
+  font-size: clamp(1rem, 1.25vw, 2rem);
 }
 
 .menuTitle{
   grid-column: 1 / 5;
+  font-family: 'Spongeboy';
+  color: rgb(22, 97, 236);
+  font-size: clamp(1rem, 2vw, 2rem);
+  text-align: center;
 }
