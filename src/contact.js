@@ -184,6 +184,10 @@ function page_load(){
         const ourTeam = document.createElement('section');
         ourTeam.classList.add('ourTeam');
 
+        const ourTeamTitle = document.createElement('p');
+        ourTeamTitle.textContent = "Our Team";
+        ourTeam.appendChild(ourTeamTitle);
+
         const teamMembers = document.createElement('section');
         teamMembers.classList.add('teamMembers');
 
@@ -227,7 +231,9 @@ function page_load(){
         teamMembers.appendChild(teamMember2);
         teamMembers.appendChild(teamMember3);
 
-        return teamMembers;
+        ourTeam.appendChild(teamMembers);
+
+        return ourTeam;
 
     }
 
