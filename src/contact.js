@@ -46,7 +46,7 @@ function page_load(){
         nameContainer.classList.add('inputContainer');
         const nameLabelForm = document.createElement('label');
         nameLabelForm.setAttribute("for", "name");
-        nameLabelForm.textContent = "Name";
+        nameLabelForm.textContent = "Name*";
         nameContainer.appendChild(nameLabelForm);
         const nameInputForm = document.createElement('input');
         nameInputForm.setAttribute("type", "text");
@@ -59,7 +59,7 @@ function page_load(){
         emailContainer.classList.add('inputContainer');
         const emailLabelForm = document.createElement('label');
         emailLabelForm.setAttribute("for", "email");
-        emailLabelForm.textContent = "Email";
+        emailLabelForm.textContent = "Email*";
         emailContainer.appendChild(emailLabelForm);
         const emailInputForm = document.createElement('input');
         emailInputForm.setAttribute("type", "email");
@@ -72,7 +72,7 @@ function page_load(){
         topicContainer.classList.add('inputContainer');
         const topicLabelForm = document.createElement('label');
         topicLabelForm.setAttribute("for", "topic");
-        topicLabelForm.textContent = "Topic";
+        topicLabelForm.textContent = "Topic*";
         topicContainer.appendChild(topicLabelForm);
         const topicInputForm = document.createElement('select');
         topicInputForm.setAttribute("name", "topic");
@@ -101,7 +101,7 @@ function page_load(){
         messageContainer.classList.add('inputContainer');
         const messageLabelForm = document.createElement('label');
         messageLabelForm.setAttribute("for", "message");
-        messageLabelForm.textContent = "Message";
+        messageLabelForm.textContent = "Message*";
         messageContainer.appendChild(messageLabelForm);
         const messageInputForm = document.createElement('textarea');
         messageInputForm.setAttribute("name", "message");
@@ -110,15 +110,18 @@ function page_load(){
         messageInputForm.setAttribute("rows","5");
         messageContainer.appendChild(messageInputForm);
 
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('buttonContainer');
         const button = document.createElement('button');
         button.textContent = "Send it";
         button.setAttribute("type", "submit");
+        buttonContainer.appendChild(button);
 
         contactFormContainer.appendChild(nameContainer);
         contactFormContainer.appendChild(emailContainer);
         contactFormContainer.appendChild(topicContainer);
         contactFormContainer.appendChild(messageContainer);
-        contactFormContainer.appendChild(button);
+        contactFormContainer.appendChild(buttonContainer);
 
         contactForm.appendChild(contactFormContainer);
 
