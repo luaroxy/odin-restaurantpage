@@ -1,3 +1,7 @@
+import Krabs from './images/Krabs.png';
+import SpongeBob from './images/SpongeBob.png';
+import Squidward from './images/Squidward.png';
+
 function page_load(){
     const container = document.createElement('div');
     container.classList.add('container');
@@ -176,6 +180,57 @@ function page_load(){
         return contactSection;
     }
 
+    function ourTeam(){
+        const ourTeam = document.createElement('section');
+        ourTeam.classList.add('ourTeam');
+
+        const teamMembers = document.createElement('section');
+        teamMembers.classList.add('teamMembers');
+
+        const teamMember1 = document.createElement('div');
+        teamMember1.classList.add('teamMember');
+        const teamMember1img = document.createElement('img');
+        teamMember1img.src = Krabs;
+        teamMember1.appendChild(teamMember1img);
+        const teamMember1Name = document.createElement('div');
+        teamMember1Name.textContent = ("Eugene Harold Krabs");
+        teamMember1.appendChild(teamMember1Name);
+        const teamMember1Position = document.createElement('p');
+        teamMember1Position.textContent = ("Owner and founder");
+        teamMember1.appendChild(teamMember1Position);
+
+        const teamMember2 = document.createElement('div');
+        teamMember2.classList.add('teamMember');
+        const teamMember2img = document.createElement('img');
+        teamMember2img.src = SpongeBob;
+        teamMember2.appendChild(teamMember2img);
+        const teamMember2Name = document.createElement('div');
+        teamMember2Name.textContent = ("SpongeBob SquarePants");
+        teamMember2.appendChild(teamMember2Name);
+        const teamMember2Position = document.createElement('p');
+        teamMember2Position.textContent = ("Fry Cook");
+        teamMember2.appendChild(teamMember2Position);
+
+        const teamMember3 = document.createElement('div');
+        teamMember3.classList.add('teamMember');
+        const teamMember3img = document.createElement('img');
+        teamMember3img.src = Squidward;
+        teamMember3.appendChild(teamMember3img);
+        const teamMember3Name = document.createElement('div');
+        teamMember3Name.textContent = ("Squidward Tentacles");
+        teamMember3.appendChild(teamMember3Name);
+        const teamMember3Position = document.createElement('p');
+        teamMember3Position.textContent = ("Cashier");
+        teamMember3.appendChild(teamMember3Position);
+
+        teamMembers.appendChild(teamMember1);
+        teamMembers.appendChild(teamMember2);
+        teamMembers.appendChild(teamMember3);
+
+        return teamMembers;
+
+    }
+
     function footer(){
         const footer = document.createElement('footer');
         footer.classList.add('footer');
@@ -203,6 +258,7 @@ function page_load(){
 
     container.appendChild(header());
     container.appendChild(contactSection());
+    container.appendChild(ourTeam());
     container.appendChild(footer());
 
     return container;

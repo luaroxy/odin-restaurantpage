@@ -254,6 +254,8 @@ body {
 
 }
 
+
+
 .contactInfo{
   color: rgb(22, 97, 236);
   font-size: clamp(1rem, 1.4vw, 2rem);
@@ -266,4 +268,16 @@ body {
   white-space: pre-line;
   color: rgba(0, 0, 0, 0.795);
   font-size: clamp(1rem, 1.25vw, 2rem);
+}
+
+.teamMembers{
+  display: flex;
+}
+
+.teamMember img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 2px solid rgb(22, 97, 236);
+  padding: 1rem;
 }
