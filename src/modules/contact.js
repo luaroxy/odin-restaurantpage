@@ -1,35 +1,12 @@
-import Krabs from './images/Krabs.png';
-import SpongeBob from './images/SpongeBob.png';
-import Squidward from './images/Squidward.png';
+import Krabs from '../images/Krabs.png';
+import SpongeBob from '../images/SpongeBob.png';
+import Squidward from '../images/Squidward.png';
+import header from './header.js';
+import footer from './footer.js';
 
 function page_load(){
     const container = document.createElement('div');
-    container.classList.add('container');
-
-    function header() {
-      const header = document.createElement('div');
-      header.classList.add('header');
-
-      const titletop = document.createElement('div');
-      titletop.textContent = ("Krusty Krab");
-
-      const optionstop = document.createElement('div');
-      optionstop.classList.add('optionstop');
-      const hometop = document.createElement('div');
-      hometop.textContent = ("Home");
-      optionstop.appendChild(hometop);
-      const menutop = document.createElement('div');
-      menutop.textContent = ("Menu");
-      optionstop.appendChild(menutop);
-      const contacttop = document.createElement('div');
-      contacttop.textContent = ("Contact");
-      optionstop.appendChild(contacttop);
-
-      header.appendChild(titletop);
-      header.appendChild(optionstop);
-
-      return header;
-    }
+    container.setAttribute('id','pageLoadContainer');
     
     function contactForm(){
         const contactForm = document.createElement('section');
@@ -239,31 +216,6 @@ function page_load(){
         return ourTeam;
 
     }
-
-    function footer(){
-        const footer = document.createElement('footer');
-        footer.classList.add('footer');
-     
-        const title = document.createElement('div');
-        title.textContent = ("Krusty Krab");
-     
-        const options = document.createElement('div');
-        options.classList.add('footeroptions');
-        const homebottom = document.createElement('div');
-        homebottom.textContent = ("Home");
-        options.appendChild(homebottom);
-        const menubottom = document.createElement('div');
-        menubottom.textContent = ("Menu");
-        options.appendChild(menubottom);
-        const contactbottom = document.createElement('div');
-        contactbottom.textContent = ("Contact");
-        options.appendChild(contactbottom);
-     
-        footer.appendChild(title);
-        footer.appendChild(options);
-     
-        return footer;
-     }
 
     container.appendChild(header());
     container.appendChild(contactSection());
