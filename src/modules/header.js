@@ -4,6 +4,7 @@ function header() {
 
     const titletop = document.createElement('div');
     titletop.textContent = ("Krusty Krab");
+    titletop.setAttribute('id','titleTop');
 
     const optionstop = document.createElement('div');
     optionstop.classList.add('optionstop');

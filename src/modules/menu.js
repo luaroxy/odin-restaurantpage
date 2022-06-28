@@ -2,6 +2,7 @@ import header from './header.js';
 import footer from './footer.js';
 
 function page_load(){
+  window.scrollTo(0,0); //to start page from top
     const container = document.createElement('div');
     container.setAttribute('id','pageLoadContainer');
 
@@ -39,9 +40,9 @@ function page_load(){
         return menu;
     }
 
-    container.appendChild(header());
+    container.appendChild(header()); //imported from header module
     container.appendChild(menuContent());
-    container.appendChild(footer());
+    container.appendChild(footer()); //imported from footer module
 
     return container;
 }

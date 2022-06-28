@@ -5,6 +5,7 @@ import header from './header.js';
 import footer from './footer.js';
 
 function page_load(){
+    window.scrollTo(0, 0); //to start page from top
     const container = document.createElement('div');
     container.setAttribute('id','pageLoadContainer');
 
@@ -37,8 +38,10 @@ function page_load(){
         const title = document.createElement('div');
         title.textContent = ("Krusty Krab");
      
-        const subtitle = document.createElement('button');
+        const subtitle = document.createElement('a');
         subtitle.textContent = ("Menu");
+        subtitle.setAttribute('id','menuCenter');
+        subtitle.setAttribute('href','#');
      
         about.appendChild(title);
         about.appendChild(subtitle);
@@ -94,11 +97,11 @@ function page_load(){
         return contact;
      }
 
-     container.appendChild(header());
+     container.appendChild(header()); //imported from header module
      container.appendChild(intro());
      container.appendChild(about());
      container.appendChild(contact());
-     container.appendChild(footer());
+     container.appendChild(footer()); //imported from footer module
 
      return container;
 }

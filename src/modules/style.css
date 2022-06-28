@@ -27,7 +27,15 @@ body {
   letter-spacing: 0.08rem;
 }
 
+a:link, a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
+#titleTop, #titleBottom{
+  cursor: pointer;
+}
 
 .intro{
   height: 100vh;
@@ -106,6 +114,10 @@ body {
   font-size: clamp(1rem, 1.75vw, 2rem);
 }
 
+#homeTop:hover, #menuTop:hover, #contactTop:hover{
+  transform: scale(1.05);
+}
+
 .about{
   height: 50vh;
   background-color: #f5f5f5;
@@ -123,7 +135,7 @@ body {
   font-weight: 550;
 }
 
-.about button, .contactForm button{
+.about a, .contactForm button{
 	background: none;
 	color: inherit;
 	border: 2px solid rgb(22, 97, 236);
@@ -135,7 +147,7 @@ body {
   letter-spacing: 0.25vw;
 }
 
-.about button:hover, .contactForm button:hover{
+.about a:hover, .contactForm button:hover{
   border: 2px solid white;
   background-color: rgba(22, 97, 236, 0.788);
   color: white;
@@ -327,4 +339,21 @@ body {
   border: 0.15vw solid rgb(22, 97, 236);
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+#submittedMessage {
+  display: none;
+}
+
+#submittedMessage.show {
+  display: block;
+  width: 20vw;
+  margin-top: 2.5vh;
+  white-space: pre-line;
+  font-size: clamp(1rem, 1.25vw, 2rem);
+  color: rgba(0, 0, 0, 0.795);
+}
+
+form.noshow{
+  display: none;
 }

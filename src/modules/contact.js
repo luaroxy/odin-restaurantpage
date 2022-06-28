@@ -5,6 +5,7 @@ import header from './header.js';
 import footer from './footer.js';
 
 function page_load(){
+    window.scrollTo(0,0); //to start page from top
     const container = document.createElement('div');
     container.setAttribute('id','pageLoadContainer');
     
@@ -19,6 +20,13 @@ function page_load(){
         const contactFormContainer = document.createElement('form');
         contactFormContainer.classList.add('contactFormContainer');
 
+        //Message when form is submitted
+        const submittedMessage = document.createElement('div');
+        submittedMessage.setAttribute('id','submittedMessage');
+        submittedMessage.textContent = "Thank you for contacting us. \r\n We will be in touch with you soon.";
+        contactForm.appendChild(submittedMessage);
+
+        //Name input
         const nameContainer = document.createElement('div');
         nameContainer.classList.add('inputContainer');
         const nameLabelForm = document.createElement('label');
@@ -32,6 +40,7 @@ function page_load(){
         nameInputForm.setAttribute("required","true");
         nameContainer.appendChild(nameInputForm);
 
+        // Email input
         const emailContainer = document.createElement('div');
         emailContainer.classList.add('inputContainer');
         const emailLabelForm = document.createElement('label');
@@ -45,6 +54,7 @@ function page_load(){
         emailInputForm.setAttribute("required","true");
         emailContainer.appendChild(emailInputForm);
 
+        // Topic select
         const topicContainer = document.createElement('div');
         topicContainer.classList.add('inputContainer');
         const topicLabelForm = document.createElement('label');
@@ -74,6 +84,7 @@ function page_load(){
         topicOption4.setAttribute("selected", "true");
         topicInputForm.appendChild(topicOption4);
 
+        //Message input
         const messageContainer = document.createElement('div');
         messageContainer.classList.add('inputContainer');
         const messageLabelForm = document.createElement('label');
@@ -87,6 +98,7 @@ function page_load(){
         messageInputForm.setAttribute("rows","5");
         messageContainer.appendChild(messageInputForm);
 
+        //Submit button
         const buttonContainer = document.createElement('div');
         buttonContainer.classList.add('buttonContainer');
         const button = document.createElement('button');
@@ -217,10 +229,10 @@ function page_load(){
 
     }
 
-    container.appendChild(header());
+    container.appendChild(header()); //imported from header module
     container.appendChild(contactSection());
     container.appendChild(ourTeam());
-    container.appendChild(footer());
+    container.appendChild(footer()); //imported from footer module
 
     return container;
 }
